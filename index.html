@@ -188,7 +188,12 @@ const REPO = onPages ? (location.pathname.split("/").filter(Boolean)[0] || locat
 // Release notes written for each version (a release on GitHub with no entry here uses its own description).
 // "file" = an APK stored right here in the site's downloads/ folder.
 const VERSIONS = [
-  { v: "1.7", when: "Oct 2026", file: "downloads/NeonFuel-1.7.apk", size: 58579756, title: "AI workout plans", notes: [
+  { v: "1.7.1", when: "Oct 2026", file: "downloads/NeonFuel-1.7.1.apk", size: 59883248, title: "Fight Night & driving mode", notes: [
+    "New 5-token theme: Fight Night Arena, with two neon fighters, stadium lights, a crowd and its own techno track, Final Round",
+    "Driving mode tile in Move: tap \"I'm driving\" so car bumps don't count as steps (turns itself off after 4 hours)",
+    "Auto-detect driving (on/off): pauses steps in a car, at car speeds, or when steps come in faster than anyone can walk",
+    "Shows how many fake steps were skipped today"] },
+  { v: "1.7", when: "Oct 2026", title: "AI workout plans", notes: [
     "AI workout plans: Gemini builds a 7–30 day regimen around your goal, with reminders if you skip a day",
     "Pick gain, lose or maintain when you sign up; calories and protein/carbs/fat split set themselves (always 100%)",
     "Fat goal, manual food entry (or let AI fill it in), meals-per-day with snacks",
@@ -249,6 +254,7 @@ const THEMES = [
   ["Anubis", "#ffc94a", "#07060f", 3], ["Shogun Dusk", "#ff6fa5", "#0e0612", 3], ["Dragon Keep", "#ff6a1f", "#08060a", 3],
   ["Jade Sun Temple", "#2be3a0", "#04120f", 3], ["Atlantis", "#2ff3e0", "#011018", 3], ["Event Horizon", "#ff9a3d", "#020104", 3],
   ["Supernova", "#ff3dcb", "#06020c", 3], ["Hyperdrive", "#4da6ff", "#01030a", 3], ["Lunar Base", "#7fd4ff", "#04060c", 3], ["Meteor Storm", "#b06bff", "#0a0418", 3],
+  ["Fight Night Arena", "#ff2e4d", "#0b0308", 5],
 ];
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
