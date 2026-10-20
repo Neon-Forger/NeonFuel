@@ -188,7 +188,14 @@ const REPO = onPages ? (location.pathname.split("/").filter(Boolean)[0] || locat
 // Release notes written for each version (a release on GitHub with no entry here uses its own description).
 // "file" = an APK stored right here in the site's downloads/ folder.
 const VERSIONS = [
-  { v: "1.6.2", when: "Oct 2026", file: "downloads/NeonFuel-1.6.2.apk", size: 58170164, title: "Message friends from anywhere", notes: [
+  { v: "1.7", when: "Oct 2026", file: "downloads/NeonFuel-1.7.apk", size: 58579756, title: "AI workout plans", notes: [
+    "AI workout plans: Gemini builds a 7–30 day regimen around your goal, with reminders if you skip a day",
+    "Pick gain, lose or maintain when you sign up; calories and protein/carbs/fat split set themselves (always 100%)",
+    "Fat goal, manual food entry (or let AI fill it in), meals-per-day with snacks",
+    "Better step tracking: background counting, hour-by-hour chart, GPS-measured stride",
+    "Smarter photo scans with blurry/dark photo warnings; Gemini (free) is now the default AI",
+    "Particles loop perfectly and can be turned off; share feedback with the creator"] },
+  { v: "1.6.2", when: "Oct 2026", title: "Message friends from anywhere", notes: [
     "Chat and stats now work from anywhere, not just on the same Wi-Fi",
     "Add friends by username: they get a friend request to accept",
     "End-to-end encrypted messages with Sent and Delivered ticks",
@@ -227,7 +234,7 @@ const FEATURES = [
   ["🔥", "Daily streaks", "Walk 2,000 steps or log a workout to keep the blue flame alive and climb the ranks."],
   ["🪙", "Earn tokens", "Every 2,000 steps and every 1,000 calories earns a token for themes and profile flair."],
   ["💬", "Friends & chat", "Add friends by username, compare stats and message them from anywhere, end-to-end encrypted."],
-  ["🏋️", "Lifting log", "Track sets and pounds moved, with an AI coach that hypes every PR."],
+  ["🏋️", "AI workout plans", "Tell Gemini your goal and get a 7–30 day plan, with nudges if you skip a workout."],
   ["💧", "Water", "Snap your jar to log water and hit your daily goal."],
   ["🎵", "Music", "Every theme has its own soundtrack, composed by the app."],
   ["🔒", "Private", "No ads. Meals and photos never leave your phone; chats are encrypted end to end."],
