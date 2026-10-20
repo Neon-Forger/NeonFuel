@@ -177,9 +177,8 @@
 
 <script>
 // ============================================================================================
-// How downloads work: the APK files live in this repo's GitHub *Releases* (repo uploads are capped
-// at 25 MB, releases allow 2 GB). This page asks GitHub which releases exist and wires the buttons
-// up automatically. To publish a new version you only create a release; you never have to edit this file.
+// How downloads work: an APK can live in the downloads/ folder of this repo (listed with "file" below)
+// or in the repo's GitHub *Releases*. This page lists both and wires the buttons up automatically.
 // The username and repo are read from the page address (yourname.github.io/repo), so nothing to configure.
 // ============================================================================================
 const onPages = location.hostname.endsWith("github.io");
@@ -187,8 +186,9 @@ const GITHUB_USER = onPages ? location.hostname.split(".")[0] : "YOUR-GITHUB-NAM
 const REPO = onPages ? (location.pathname.split("/").filter(Boolean)[0] || location.hostname) : "neonfuel";
 
 // Release notes written for each version (a release on GitHub with no entry here uses its own description).
+// "file" = an APK stored right here in the site's downloads/ folder.
 const VERSIONS = [
-  { v: "1.6.2", when: "Oct 2026", title: "Message friends from anywhere", notes: [
+  { v: "1.6.2", when: "Oct 2026", file: "downloads/NeonFuel-1.6.2.apk", size: 58170164, title: "Message friends from anywhere", notes: [
     "Chat and stats now work from anywhere, not just on the same Wi-Fi",
     "Add friends by username: they get a friend request to accept",
     "End-to-end encrypted messages with Sent and Delivered ticks",
@@ -289,18 +289,21 @@ function render(downloads) {
   }).join("");
 }
 
-render({});   // show everything right away, then light up the buttons once GitHub answers
+// APKs stored on the site itself
+const local = {};
+for (const r of VERSIONS) if (r.file) local[r.v] = { url: r.file, size: r.size };
+render(local);   // show everything right away, then add any GitHub Releases once GitHub answers
 fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO}/releases?per_page=100`)
   .then(r => r.ok ? r.json() : [])
   .then(rels => {
-    const downloads = {};
+    const downloads = { ...local };
     for (const rel of rels) {
       if (rel.draft) continue;
       const apk = (rel.assets || []).find(a => a.name.toLowerCase().endsWith(".apk"));
       const m = (rel.tag_name + " " + (rel.name || "")).match(/(\d+\.\d+(?:\.\d+)?)/);
       if (!apk || !m) continue;
       const v = m[1];
-      if (downloads[v]) continue;
+      if (downloads[v] && !local[v]) continue;
       downloads[v] = { url: apk.browser_download_url, size: apk.size, title: rel.name || "NeonFuel " + v,
         when: new Date(rel.published_at).toLocaleDateString(undefined, { month: "short", year: "numeric" }),
         notes: (rel.body || "").split(/\r?\n/).map(l => l.replace(/^[-*•]\s*/, "").trim()).filter(Boolean).slice(0, 6) };
@@ -308,7 +311,7 @@ fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO}/releases?per_page=100
     render(downloads);
   })
   .catch(() => {
-    document.getElementById("dlStatus").textContent = "Couldn't reach GitHub. Try the Releases page: github.com/" + GITHUB_USER + "/" + REPO + "/releases";
+    if (!Object.keys(local).length) document.getElementById("dlStatus").textContent = "Couldn't reach GitHub. Try the Releases page: github.com/" + GITHUB_USER + "/" + REPO + "/releases";
   });
 </script>
 </body>
