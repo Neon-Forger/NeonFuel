@@ -100,6 +100,14 @@
   footer { padding: 40px 0 60px; text-align: center; color: var(--muted); font-size: 14px; }
   footer b { color: var(--text); }
 
+  .mh { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; background: var(--card); border: 1px solid #ff2e4d;
+    border-radius: 20px; padding: 22px; box-shadow: 0 0 30px rgba(255,46,77,.25); }
+  .mh h3 { font-family: Orbitron; letter-spacing: 3px; font-size: 26px; margin: 0 0 4px; color: #fff; text-shadow: 0 0 14px rgba(255,46,77,.8); }
+  .mh ul { margin: 10px 0 0; padding-left: 18px; color: #c8dcf2; font-size: 14px; }
+  .mh .btn.main { background: linear-gradient(90deg, #ff2e4d, #ff8a9d); box-shadow: 0 0 26px rgba(255,46,77,.55); }
+  .mh .size { display: block; color: var(--muted); font-size: 11px; margin-top: 6px; text-align: center; font-family: "Share Tech Mono", monospace; }
+  @media (max-width: 760px) { .mh { grid-template-columns: 1fr; } }
+
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-top: 24px; } header nav { display: none; }
     .ver { grid-template-columns: 1fr; } .ver .dl { justify-self: start; }
@@ -112,7 +120,7 @@
 <div class="wrap">
   <header>
     <img src="logo.png" alt="NeonFuel logo"><b>NEONFUEL</b>
-    <nav><a href="#features">Features</a><a href="#themes">Themes</a><a href="#versions">Versions</a><a href="#install">Install</a></nav>
+    <nav><a href="#features">Features</a><a href="#themes">Themes</a><a href="#versions">Versions</a><a href="#manhunt">Manhunt</a><a href="#install">Install</a></nav>
   </header>
 
   <div class="hero">
@@ -155,6 +163,28 @@
     <h2>VERSIONS</h2>
     <p class="sub">Every release, newest first. Installing a new version keeps all your data.</p>
     <div class="versions" id="versionList"></div>
+  </section>
+
+  <section id="manhunt">
+    <h2>MORE APPS</h2>
+    <p class="sub">Also made by Neon Forger.</p>
+    <div class="mh">
+      <div>
+        <h3>◎ MANHUNT <span class="pill">v1.0</span></h3>
+        <p class="sub" style="margin:0">Neon hide-and-seek with real GPS. Play with friends anywhere, even on different Wi-Fi or mobile data.</p>
+        <ul>
+          <li>Hunters get a satellite or street map with breadcrumbs and hider pings every few minutes</li>
+          <li>Hiders get a radar with a red arrow toward the hunters, plus a buzz on every update</li>
+          <li>Game modes: Lives, Infection (caught hiders join the hunters) and Sudden death</li>
+          <li>Draw a circle or square play area; every timer and rule is customisable</li>
+          <li>Sign in with your NeonFuel account (needs NeonFuel 1.7.2+) or make a Manhunt account</li>
+        </ul>
+      </div>
+      <div>
+        <a class="btn main" href="downloads/Manhunt-1.0.apk" download>⬇ DOWNLOAD MANHUNT</a>
+        <span class="size">v1.0 · 54 MB · Android 10+</span>
+      </div>
+    </div>
   </section>
 
   <section id="install">
