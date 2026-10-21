@@ -188,7 +188,10 @@ const REPO = onPages ? (location.pathname.split("/").filter(Boolean)[0] || locat
 // Release notes written for each version (a release on GitHub with no entry here uses its own description).
 // "file" = an APK stored right here in the site's downloads/ folder.
 const VERSIONS = [
-  { v: "1.7.1", when: "Oct 2026", file: "downloads/NeonFuel-1.7.1.apk", size: 59883248, title: "Fight Night & driving mode", notes: [
+  { v: "1.7.2", when: "Oct 2026", file: "downloads/NeonFuel-1.7.2.apk", size: 59916184, title: "Sign in with NeonFuel", notes: [
+    "Use your NeonFuel account to sign in to Manhunt (your name and profile picture carry over)",
+    "NeonFuel asks for your password first; other apps never see it"] },
+  { v: "1.7.1", when: "Oct 2026", title: "Fight Night & driving mode", notes: [
     "New 5-token theme: Fight Night Arena, with two neon fighters, stadium lights, a crowd and its own techno track, Final Round",
     "Driving mode tile in Move: tap \"I'm driving\" so car bumps don't count as steps (turns itself off after 4 hours)",
     "Auto-detect driving (on/off): pauses steps in a car, at car speeds, or when steps come in faster than anyone can walk",
