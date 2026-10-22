@@ -107,6 +107,9 @@
   .mh .btn.main { background: linear-gradient(90deg, #ff2e4d, #ff8a9d); box-shadow: 0 0 26px rgba(255,46,77,.55); }
   .mh .size { display: block; color: var(--muted); font-size: 11px; margin-top: 6px; text-align: center; font-family: "Share Tech Mono", monospace; }
   @media (max-width: 760px) { .mh { grid-template-columns: 1fr; } }
+  .mh.freeze { margin-top: 18px; border-color: #7fe9ff; box-shadow: 0 0 30px rgba(127,233,255,.25); }
+  .mh.freeze h3 { text-shadow: 0 0 14px rgba(127,233,255,.85); }
+  .mh.freeze .btn.main { background: linear-gradient(90deg, #2ec5ff, #bdf4ff); color: #021018; box-shadow: 0 0 26px rgba(127,233,255,.55); }
 
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-top: 24px; } header nav { display: none; }
@@ -120,7 +123,7 @@
 <div class="wrap">
   <header>
     <img src="logo.png" alt="NeonFuel logo"><b>NEONFUEL</b>
-    <nav><a href="#features">Features</a><a href="#themes">Themes</a><a href="#versions">Versions</a><a href="#manhunt">Manhunt</a><a href="#install">Install</a></nav>
+    <nav><a href="#features">Features</a><a href="#themes">Themes</a><a href="#versions">Versions</a><a href="#manhunt">More apps</a><a href="#install">Install</a></nav>
   </header>
 
   <div class="hero">
@@ -185,6 +188,23 @@
       <div>
         <a class="btn main" href="downloads/Manhunt-1.4.apk" download>⬇ DOWNLOAD MANHUNT 1.4</a>
         <span class="size">v1.4 · 56 MB · Android 10+</span>
+      </div>
+    </div>
+    <div class="mh freeze">
+      <div>
+        <h3>❄ NEON FREEZE <span class="pill">v2</span></h3>
+        <p class="sub" style="margin:0">Freeze the apps you don't want running, and unfreeze them in one tap whenever you need them.</p>
+        <ul>
+          <li>Freeze or unfreeze any app you installed, or all of them at once</li>
+          <li>Android and system apps are never touched</li>
+          <li>Protect your important apps so they always stay on, with a background guard that keeps them enabled</li>
+          <li>Search and filter your app list</li>
+          <li>Needs <a href="https://shizuku.rikka.app/" target="_blank" rel="noopener">Shizuku</a> running (start it with Wireless debugging), no root needed</li>
+        </ul>
+      </div>
+      <div>
+        <a class="btn main" href="downloads/NeonFreeze-2.apk" download>⬇ DOWNLOAD NEON FREEZE</a>
+        <span class="size">v2 · 52 MB · Android 10+</span>
       </div>
     </div>
   </section>
