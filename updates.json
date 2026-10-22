@@ -1,0 +1,14 @@
+{
+  "neonfuel": {
+    "code": 15,
+    "name": "1.7.5",
+    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.7.5.apk",
+    "notes": ["Tells you when a new version of NeonFuel is out"]
+  },
+  "manhunt": {
+    "code": 5,
+    "name": "1.5",
+    "url": "https://neon-forger.github.io/NeonFuel/downloads/Manhunt-1.5.apk",
+    "notes": ["Tells you when a new version of Manhunt is out"]
+  }
+}
