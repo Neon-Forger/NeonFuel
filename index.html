@@ -240,7 +240,11 @@ const REPO = onPages ? (location.pathname.split("/").filter(Boolean)[0] || locat
 // Release notes written for each version (a release on GitHub with no entry here uses its own description).
 // "file" = an APK stored right here in the site's downloads/ folder.
 const VERSIONS = [
-  { v: "1.8.1", when: "Oct 2026", file: "downloads/NeonFuel-1.8.1.apk", size: 60545709, title: "Cleaner plans, scan and settings", notes: [
+  { v: "1.8.2", when: "Oct 2026", file: "downloads/NeonFuel-1.8.2.apk", size: 60545709, title: "Faster Scan screen", notes: [
+    "Enter food manually is the first button on Scan, with Take photo and Choose from gallery right under it",
+    "Removed the extra photo tip box",
+    "The middle button in the bottom bar is now a plus"] },
+  { v: "1.8.1", when: "Oct 2026", size: 60545709, title: "Cleaner plans, scan and settings", notes: [
     "Workout plan tiles read in plain words: \"4 sets · 8–10 reps · 90 sec rest\"",
     "Scan screen: Take photo is up top with its tip right under it; Go Ultra moved below",
     "Every Settings tile folds down to a one-line summary",

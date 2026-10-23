@@ -1,12 +1,12 @@
 {
   "neonfuel": {
-    "code": 17,
-    "name": "1.8.1",
-    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.8.1.apk",
+    "code": 18,
+    "name": "1.8.2",
+    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.8.2.apk",
     "notes": [
-      "Cleaner workout plan tiles",
-      "Take photo button moved to the top of Scan",
-      "Every Settings tile folds down"
+      "Enter food manually is now first on Scan",
+      "Cleaner Scan screen",
+      "Plus button in the bottom bar"
     ]
   },
   "manhunt": {
