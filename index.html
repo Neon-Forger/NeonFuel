@@ -224,9 +224,9 @@
         </ul>
       </div>
       <div>
-        <a class="btn main" href="https://github.com/Neon-Forger/Clipping-Agent/releases/latest/download/ClipCartel.apk">⬇ PHONE APP (APK)</a>
-        <a class="btn main" href="https://github.com/Neon-Forger/Clipping-Agent/releases/latest/download/ClipCartelAgent-Windows.zip">⬇ PC AGENT (WINDOWS)</a>
-        <span class="size">Android 8+ · Windows 10/11 · <a href="https://github.com/Neon-Forger/Clipping-Agent">source</a></span>
+        <a class="btn main" id="ccApk" href="https://github.com/Neon-Forger/Clipping-Agent/releases/download/v1.0.4/ClipCartel.apk">⬇ PHONE APP <span class="ccv">v1.0.4</span></a>
+        <a class="btn main" id="ccWin" href="https://github.com/Neon-Forger/Clipping-Agent/releases/download/v1.0.4/ClipCartelAgent-Windows.zip">⬇ PC AGENT <span class="ccv">v1.0.4</span></a>
+        <span class="size" id="ccInfo">Latest: v1.0.4 · Android 8+ · Windows 10/11 · <a href="https://github.com/Neon-Forger/Clipping-Agent/releases">all versions</a></span>
       </div>
     </div>
   </section>
@@ -435,6 +435,19 @@ fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO}/releases?per_page=100
   .catch(() => {
     if (!Object.keys(local).length) document.getElementById("dlStatus").textContent = "Couldn't reach GitHub. Try the Releases page: github.com/" + GITHUB_USER + "/" + REPO + "/releases";
   });
+</script>
+<script>
+// Clip Cartel: always point the buttons at the newest release
+fetch("https://api.github.com/repos/Neon-Forger/Clipping-Agent/releases/latest").then(r => r.json()).then(rel => {
+  if (!rel || !rel.tag_name) return;
+  const apk = (rel.assets || []).find(a => a.name.endsWith(".apk"));
+  const win = (rel.assets || []).find(a => a.name.endsWith(".zip"));
+  if (apk) document.getElementById("ccApk").href = apk.browser_download_url;
+  if (win) document.getElementById("ccWin").href = win.browser_download_url;
+  document.querySelectorAll(".ccv").forEach(e => e.textContent = rel.tag_name);
+  const when = new Date(rel.published_at).toLocaleString([], {month: "short", day: "numeric", hour: "numeric", minute: "2-digit"});
+  document.getElementById("ccInfo").innerHTML = `Latest: ${rel.tag_name} (${when}) · Android 8+ · Windows 10/11 · <a href="https://github.com/Neon-Forger/Clipping-Agent/releases">all versions</a>`;
+}).catch(() => {});
 </script>
 </body>
 </html>
