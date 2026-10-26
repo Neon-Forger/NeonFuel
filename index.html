@@ -100,20 +100,6 @@
   footer { padding: 40px 0 60px; text-align: center; color: var(--muted); font-size: 14px; }
   footer b { color: var(--text); }
 
-  .mh { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; background: var(--card); border: 1px solid #ff2e4d;
-    border-radius: 20px; padding: 22px; box-shadow: 0 0 30px rgba(255,46,77,.25); }
-  .mh h3 { font-family: Orbitron; letter-spacing: 3px; font-size: 26px; margin: 0 0 4px; color: #fff; text-shadow: 0 0 14px rgba(255,46,77,.8); }
-  .mh ul { margin: 10px 0 0; padding-left: 18px; color: #c8dcf2; font-size: 14px; }
-  .mh .btn.main { background: linear-gradient(90deg, #ff2e4d, #ff8a9d); box-shadow: 0 0 26px rgba(255,46,77,.55); }
-  .mh .size { display: block; color: var(--muted); font-size: 11px; margin-top: 6px; text-align: center; font-family: "Share Tech Mono", monospace; }
-  @media (max-width: 760px) { .mh { grid-template-columns: 1fr; } }
-  .mh.freeze { margin-top: 18px; border-color: #7fe9ff; box-shadow: 0 0 30px rgba(127,233,255,.25); }
-  .mh.freeze h3 { text-shadow: 0 0 14px rgba(127,233,255,.85); }
-  .mh.freeze .btn.main { background: linear-gradient(90deg, #2ec5ff, #bdf4ff); color: #021018; box-shadow: 0 0 26px rgba(127,233,255,.55); }
-  .mh.clip { margin-top: 18px; border-color: #ffd400; box-shadow: 0 0 30px rgba(255,212,0,.22); }
-  .mh.clip h3 { text-shadow: 0 0 14px rgba(255,212,0,.75); }
-  .mh.clip h3 b { color: #ff2e4d; }
-  .mh.clip .btn.main { background: linear-gradient(90deg, #ff2e4d, #ffd400); color: #120400; box-shadow: 0 0 26px rgba(255,212,0,.45); display: block; text-align: center; margin-bottom: 10px; }
 
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-top: 24px; } header nav { display: none; }
@@ -127,7 +113,7 @@
 <div class="wrap">
   <header>
     <img src="logo.png" alt="NeonFuel logo"><b>NEONFUEL</b>
-    <nav><a href="#features">Features</a><a href="#themes">Themes</a><a href="#versions">Versions</a><a href="#manhunt">More apps</a><a href="#install">Install</a></nav>
+    <nav><a href="#features">Features</a><a href="#themes">Themes</a><a href="#versions">Versions</a><a href="#install">Install</a></nav>
   </header>
 
   <div class="hero">
@@ -170,66 +156,6 @@
     <h2>VERSIONS</h2>
     <p class="sub">Every release, newest first. Installing a new version keeps all your data.</p>
     <div class="versions" id="versionList"></div>
-  </section>
-
-  <section id="manhunt">
-    <h2>MORE APPS</h2>
-    <p class="sub">Also made by Neon Forger.</p>
-    <div class="mh">
-      <div>
-        <h3>◎ MANHUNT <span class="pill">v1.5</span></h3>
-        <p class="sub" style="margin:0">Neon hide-and-seek with real GPS. Play with friends anywhere, even on different Wi-Fi or mobile data.</p>
-        <ul>
-          <li>Hunters get a satellite or street map with breadcrumbs and hider pings every few minutes</li>
-          <li>Hiders get a radar with a live red arrow pointing at where the hunters are right now, plus a buzz when one gets close</li>
-          <li>Game modes: Lives, Infection (caught hiders join the hunters) and Sudden death</li>
-          <li>Draw a circle or square play area; every timer and rule is customisable</li>
-          <li>Sign in with your NeonFuel account (needs NeonFuel 1.7.2+) or make a Manhunt account</li>
-        </ul>
-        <p class="sub" style="margin:10px 0 0;font-size:13px"><b style="color:#ff8a9d">New in 1.5:</b> Manhunt now tells you when a new version is out, right when you open it.
-          (1.4: your dot only moves when you take steps, a Re-sync button, live hunter arrows and a much faster live connection.)</p>
-      </div>
-      <div>
-        <a class="btn main" href="downloads/Manhunt-1.5.apk" download>⬇ DOWNLOAD MANHUNT 1.5</a>
-        <span class="size">v1.5 · 56 MB · Android 10+</span>
-      </div>
-    </div>
-    <div class="mh freeze">
-      <div>
-        <h3>❄ NEON FREEZE <span class="pill">v2</span></h3>
-        <p class="sub" style="margin:0">Freeze the apps you don't want running, and unfreeze them in one tap whenever you need them.</p>
-        <ul>
-          <li>Freeze or unfreeze any app you installed, or all of them at once</li>
-          <li>Android and system apps are never touched</li>
-          <li>Protect your important apps so they always stay on, with a background guard that keeps them enabled</li>
-          <li>Search and filter your app list</li>
-          <li>Needs <a href="https://shizuku.rikka.app/" target="_blank" rel="noopener">Shizuku</a> running (start it with Wireless debugging), no root needed</li>
-        </ul>
-      </div>
-      <div>
-        <a class="btn main" href="downloads/NeonFreeze-2.apk" download>⬇ DOWNLOAD NEON FREEZE</a>
-        <span class="size">v2 · 52 MB · Android 10+</span>
-      </div>
-    </div>
-    <div class="mh freeze" id="neonclip">
-      <span id="clipcartel"></span>
-      <div>
-        <h3>⚡ NEONCLIP <span class="pill">PC + PHONE</span></h3>
-        <p class="sub" style="margin:0">An AI content machine for your PC with two separate sections, plus a phone app to watch and control both.</p>
-        <ul>
-          <li><b>Clipping:</b> clips Content Rewards campaign videos with AI, edits them (captions, zooms, flashes), posts to TikTok and submits each link for payout</li>
-          <li><b>YouTube:</b> sign in with Google, pick or create a channel (with a neon profile picture and banner), then it makes long videos and Shorts every day</li>
-          <li>Original AI videos (script, voiceover, footage, captions, chapters) or edits of videos you're allowed to reuse (your own, permission, Creative Commons)</li>
-          <li>Neon thumbnails, titles, descriptions and tags, uploaded at your times</li>
-          <li>Phone app: live status, notifications, change any setting or just tell it what to do</li>
-        </ul>
-      </div>
-      <div>
-        <a class="btn main" id="ccApk" href="https://github.com/Neon-Forger/Clipping-Agent/releases/latest" style="display:block;text-align:center;margin-bottom:10px">⬇ PHONE APP <span class="ccv"></span></a>
-        <a class="btn main" id="ccWin" href="https://github.com/Neon-Forger/Clipping-Agent/releases/latest" style="display:block;text-align:center">⬇ PC APP <span class="ccv"></span></a>
-        <span class="size" id="ccInfo">Android 8+ · Windows 10/11 · <a href="https://github.com/Neon-Forger/Clipping-Agent/releases">all versions</a></span>
-      </div>
-    </div>
   </section>
 
   <section id="install">
@@ -436,19 +362,6 @@ fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO}/releases?per_page=100
   .catch(() => {
     if (!Object.keys(local).length) document.getElementById("dlStatus").textContent = "Couldn't reach GitHub. Try the Releases page: github.com/" + GITHUB_USER + "/" + REPO + "/releases";
   });
-</script>
-<script>
-// Clip Cartel: always point the buttons at the newest release
-fetch("https://api.github.com/repos/Neon-Forger/Clipping-Agent/releases/latest").then(r => r.json()).then(rel => {
-  if (!rel || !rel.tag_name) return;
-  const apk = (rel.assets || []).find(a => a.name.endsWith(".apk"));
-  const win = (rel.assets || []).find(a => a.name.endsWith(".zip"));
-  if (apk) document.getElementById("ccApk").href = apk.browser_download_url;
-  if (win) document.getElementById("ccWin").href = win.browser_download_url;
-  document.querySelectorAll(".ccv").forEach(e => e.textContent = rel.tag_name);
-  const when = new Date(rel.published_at).toLocaleString([], {month: "short", day: "numeric", hour: "numeric", minute: "2-digit"});
-  document.getElementById("ccInfo").innerHTML = `Latest: ${rel.tag_name} (${when}) · Android 8+ · Windows 10/11 · <a href="https://github.com/Neon-Forger/Clipping-Agent/releases">all versions</a>`;
-}).catch(() => {});
 </script>
 </body>
 </html>
