@@ -1,12 +1,13 @@
 {
   "neonfuel": {
-    "code": 18,
-    "name": "1.8.2",
-    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.8.2.apk",
+    "code": 19,
+    "name": "1.9",
+    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.9.apk",
     "notes": [
-      "Enter food manually is now first on Scan",
-      "Cleaner Scan screen",
-      "Plus button in the bottom bar"
+      "Opening the app keeps your streak",
+      "Halloween Night theme with its own song",
+      "Streak flame and water match your theme",
+      "Stopwatch in Move and Workout"
     ]
   },
   "manhunt": {
