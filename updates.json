@@ -1,14 +1,9 @@
 {
   "neonfuel": {
-    "code": 19,
-    "name": "1.9",
-    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.9.apk",
-    "notes": [
-      "Opening the app keeps your streak",
-      "Halloween Night theme with its own song",
-      "Streak flame and water match your theme",
-      "Stopwatch in Move and Workout"
-    ]
+    "code": 20,
+    "name": "1.9.1",
+    "url": "https://neon-forger.github.io/NeonFuel/downloads/NeonFuel-1.9.1.apk",
+    "notes": []
   },
   "manhunt": {
     "code": 5,
